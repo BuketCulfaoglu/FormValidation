@@ -34,7 +34,15 @@
    	</label>
  	<input type="text" name="passport" id="passport" />
 
+ 	<label>Cep Telefonu
+ 		<span id="mobileMsg" class="small">Telefon numarası giriniz</span>
+   	</label>
+ 	<input type="text" name="mobile" id="mobile" />
 
+ 	<label>TC Kimlik No
+ 		<span id="tcknMsg" class="small">TC Kimlik</span>
+   	</label>
+ 	<input type="text" name="tckn" id="tckn" />
  
 
     <button  type="submit">Gönder</button>
