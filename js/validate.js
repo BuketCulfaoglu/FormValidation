@@ -35,7 +35,7 @@ $(document).ready(function(){
 
 	function validateName(){
 		var a = $("#name").val();
-		var filter = /^[a-zA-Z ]+$/;
+		var filter = /^[a-zA-Z. ]+$/;
 
 		//Geçerliyse error class'ı kaldır
 		if (filter.test(a)) {
@@ -73,11 +73,11 @@ $(document).ready(function(){
 
 	function validatePassport(){
 		var a = $("#passport").val();
-		var filter = /^[a-zA-Z0-9]+[a-zA-Z0-9_.-]+[a-zA-Z0-9_-]+@[a-zA-Z0-9]+[a-zA-Z0-9.-]+[a-zA-Z0-9]+.[a-z]{2,4}$/;
+		var filter = /^[a-zA-Z0-9]{1,2}-[0-9]{6}$/;
 
 		if(filter.test(a)){
 			passport.removeClass("error");
-			passportMsg.text("Pasaport No Format : TR-123456");
+			passportMsg.text("Pasaport No Format : TR-123456, T-123456");
 			passportMsg.removeClass("error");
 			return true;
 		}
@@ -92,7 +92,7 @@ $(document).ready(function(){
 
 	function validateMobile(){
 		var a = $("#mobile").val();;
-		var filter = /^[a-zA-Z0-9]+[a-zA-Z0-9_.-]+[a-zA-Z0-9_-]+@[a-zA-Z0-9]+[a-zA-Z0-9.-]+[a-zA-Z0-9]+.[a-z]{2,4}$/;
+		var filter = /^[0-9 ]{10,14}$/;
 
 		if(filter.test(a)){
 			mobile.removeClass("error");
